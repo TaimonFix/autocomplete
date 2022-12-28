@@ -1,10 +1,7 @@
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+
 
 public class FrameMain extends JFrame {
     private JTextField textFieldWord;
