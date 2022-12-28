@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Objects;
 
 public class FrameMain extends JFrame {
@@ -9,6 +11,7 @@ public class FrameMain extends JFrame {
     private JButton buttonGo;
     private JPanel panelMain;
     private JScrollPane jScrollPane;
+    private JLabel label1;
 
     public FrameMain() {
         this.setLocationRelativeTo(null);
@@ -19,27 +22,46 @@ public class FrameMain extends JFrame {
         this.pack();
 
         this.setSize(600, 250);
+
+        HashMap<String,Integer> map = new HashMap<>();
+        HashMap<String,Integer> map1 = new HashMap<>();
+        PrefixTree trie = new PrefixTree(' ');
+        PrefixTree trie1 = new PrefixTree(' ');
+
+
+
         buttonGo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                HashMap<String,Integer> map = new HashMap<>();
-                map.put("asefa", 1);
-                System.out.println(textFieldWord.getText());
-                jScrollPane.add(textFieldWord);
+
+                trie.insert(textFieldWord.getText());
+                trie.getAllStrings("", map);
+                System.out.println(map);
 
             }
         });
 
 
-        jScrollPane.addKeyListener(new KeyAdapter() {
+        textFieldWord.addKeyListener(new KeyAdapter() {
             @Override
-            public void keyTyped(KeyEvent e) {
-                if (textFieldWord.getText().length() > 1) {
-                    System.out.println(textFieldWord.getText());
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                System.out.println(textFieldWord.getText());
+                label1.setText(textFieldWord.getText());
+                String prefix = textFieldWord.getText();
+
+                HashMap<String,Integer> map1 = new HashMap<>();
+                PrefixTree trie1 = new PrefixTree(' ');
+
+                if (map.size() > 0) {
+                    for (int i = 0; i < prefix.length(); i++) {
+                        trie1 = trie.findNodeByChar(prefix.charAt(i));
+                    }
+                    if (trie1 != null) {
+                        trie1.getAllStrings("", map1);
+                        label1.setText("auto:" + map1);
+                    }
                 }
-                super.keyTyped(e);
-
-
             }
         });
     }

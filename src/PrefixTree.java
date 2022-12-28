@@ -63,32 +63,12 @@ public class PrefixTree {
             path = path + value;
         }
         if (children != null) {
-            for (PrefixTree node: children) {
+            for (PrefixTree node : children) {
                 node.getAllStrings(path, result);
             }
         } else {
             result.put(path, k);
         }
-    }
 
-//    List<String> autoComplete(String prefix) {
-//        PrefixTree node = this;
-//        List<String> res = new ArrayList<String>();
-//        for (char ch: prefix.toCharArray()) {
-//            node = children.get(ch);
-//            if (node == null)
-//                return new ArrayList<String>();
-//        }
-//        helper(node, res,  prefix.substring(0, prefix.length()-1));
-//        return res;
-//    }
-//
-//    private void helper(PrefixTree node, List<String> res, String prefix) {
-//        if (node == null ) //base condition
-//            return;
-//        if (children == null)
-//            res.add(prefix + node.value);
-//        for (PrefixTree child: children)
-//            helper(child, res, prefix + node.value);
-//    }
+    }
 }

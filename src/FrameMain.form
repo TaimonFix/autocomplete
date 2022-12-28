@@ -27,7 +27,14 @@
         </constraints>
         <properties/>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="65989" class="javax.swing.JLabel" binding="label1">
+            <constraints/>
+            <properties>
+              <text value="Label"/>
+            </properties>
+          </component>
+        </children>
       </scrollpane>
       <component id="cfb24" class="javax.swing.JButton" binding="buttonGo">
         <constraints>
