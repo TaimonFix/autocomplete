@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class PrefixTree {
     char value;
-    int k = 1;
+    int k;
     List<PrefixTree> children;
 
     public PrefixTree(char value) {
@@ -14,8 +14,10 @@ public class PrefixTree {
     public void insert(String word) {
         int length = word.length();
 
-        if (length == 0)
+        if (length == 0) {
+            k++;
             return;
+        }
 
         if (children == null) {
             children = new ArrayList<>();
@@ -65,32 +67,28 @@ public class PrefixTree {
                 node.getAllStrings(path, result);
             }
         } else {
-            if (!result.containsKey(path)) {
-                result.put(path, 1);
-            } else {
-                result.put(path, result.get(path) + 1);
-            }
+            result.put(path, k);
         }
     }
 
-    List<String> autoComplete(String prefix) {
-        PrefixTree node = this;
-        List<String> res = new ArrayList<String>();
-        for (char ch: prefix.toCharArray()) {
-            node = children.get(ch);
-            if (node == null)
-                return new ArrayList<String>();
-        }
-        helper(node, res,  prefix.substring(0, prefix.length()-1));
-        return res;
-    }
-
-    private void helper(PrefixTree node, List<String> res, String prefix) {
-        if (node == null ) //base condition
-            return;
-        if (children == null)
-            res.add(prefix + node.value);
-        for (PrefixTree child: children)
-            helper(child, res, prefix + node.value);
-    }
+//    List<String> autoComplete(String prefix) {
+//        PrefixTree node = this;
+//        List<String> res = new ArrayList<String>();
+//        for (char ch: prefix.toCharArray()) {
+//            node = children.get(ch);
+//            if (node == null)
+//                return new ArrayList<String>();
+//        }
+//        helper(node, res,  prefix.substring(0, prefix.length()-1));
+//        return res;
+//    }
+//
+//    private void helper(PrefixTree node, List<String> res, String prefix) {
+//        if (node == null ) //base condition
+//            return;
+//        if (children == null)
+//            res.add(prefix + node.value);
+//        for (PrefixTree child: children)
+//            helper(child, res, prefix + node.value);
+//    }
 }
