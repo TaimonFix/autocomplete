@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2061abe2-d55a-4389-a044-713314d96dfb" name="Changes" comment="Реализация PrefixTree">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="2061abe2-d55a-4389-a044-713314d96dfb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrefixTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrefixTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;ToolWindow&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;270&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Тима/IdeaProjects/siakod_task_4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/braty/IdeaProjects/siakod_task_4&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,8 +56,10 @@
 }</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="AutocompleteTrieArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="AutocompleteTrieArray" />
-      <module name="siakod_task_4" />
+      <module name="siakod_task_3" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -73,8 +73,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.AutocompleteTrieArray" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -87,46 +87,34 @@
       <option name="presentableId" value="Default" />
       <updated>1671367190307</updated>
       <workItem from="1671367192239" duration="322000" />
-      <workItem from="1671376031393" duration="12338000" />
-      <workItem from="1671610226431" duration="1568000" />
-      <workItem from="1671615297059" duration="6430000" />
-      <workItem from="1671656435050" duration="11185000" />
-      <workItem from="1671682907317" duration="993000" />
+      <workItem from="1671376031393" duration="12211000" />
+      <workItem from="1672208382501" duration="107000" />
     </task>
-    <task id="LOCAL-00001" summary="Реализация PrefixTree">
-      <created>1671400275816</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1671400275816</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Реализация PrefixTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализация PrefixTree" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/AutocompleteTrieArray.java</url>
-          <line>67</line>
-          <option name="timeStamp" value="15" />
+          <line>22</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/siakod_task_4$Main.ic" NAME="Main Coverage Results" MODIFIED="1671663861079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
