@@ -24,11 +24,7 @@ public class FrameMain extends JFrame {
         this.setSize(600, 250);
 
         HashMap<String,Integer> map = new HashMap<>();
-        HashMap<String,Integer> map1 = new HashMap<>();
         PrefixTree trie = new PrefixTree(' ');
-        PrefixTree trie1 = new PrefixTree(' ');
-
-
 
         buttonGo.addActionListener(new ActionListener() {
             @Override
@@ -47,7 +43,6 @@ public class FrameMain extends JFrame {
             public void keyPressed(KeyEvent e) {
                 super.keyPressed(e);
                 System.out.println(textFieldWord.getText());
-                label1.setText(textFieldWord.getText());
                 String prefix = textFieldWord.getText();
 
                 HashMap<String,Integer> map1 = new HashMap<>();
